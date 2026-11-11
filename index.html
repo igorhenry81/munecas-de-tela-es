@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curso de Muñecas de Tela — Aprende desde cero</title>
+<meta name="description" content="Aprende a crear hermosas muñecas de tela desde cero, incluso si nunca has cosido. Más de 40 clases en video, moldes, acceso de por vida y certificado.">
+<meta property="og:title" content="Curso de Muñecas de Tela de Mariana">
+<meta property="og:description" content="Más de 40 clases en video paso a paso, moldes y acceso de por vida. Ideal para principiantes.">
+<meta property="og:image" content="https://www.munecasdetela.site/images/hero.webp">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://www.munecasdetela.site/">
+<meta name="theme-color" content="#FDFBF8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧵</text></svg>">
+<link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="images/hero-sm.webp" as="image" type="image/webp" imagesrcset="images/hero-sm.webp 640w, images/hero-md.webp 800w, images/hero.webp 1024w" imagesizes="(min-width:860px) 500px, calc(100vw - 40px)" fetchpriority="high">
+<style>
+  @font-face{font-family:"DM Sans";src:url(fonts/dm-sans.woff2) format("woff2");font-weight:100 1000;font-style:normal;font-display:swap;
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:Fraunces;src:url(fonts/fraunces.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap;
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  /* fuentes de respaldo con medidas parecidas: evitan que el texto "salte" al cargar */
+  @font-face{font-family:"Fraunces Fallback";src:local("Georgia");size-adjust:94%}
+  @font-face{font-family:"DM Sans Fallback";src:local("Arial"),local("ArialMT"),local("Liberation Sans"),local("Helvetica");size-adjust:103%}
+  :root{
+    --cream:#FDFBF8; --paper:#F6EFE6; --ink:#172B2D; --muted:#55615F;
+    --green:#3F8A58; --green-d:#2F6E45; --gold:#C58A16; --rose:#E9C9C1; --line:#E7DED2;
+    --radius:18px; --shadow:0 10px 30px rgba(23,43,45,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font:17px/1.6 "DM Sans","DM Sans Fallback",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;height:auto;display:block}
+  h1,h2,h3{font-family:Fraunces,"Fraunces Fallback",Georgia,serif;line-height:1.15;font-weight:700;letter-spacing:-.01em}
+  h1{font-size:clamp(2rem,5.5vw,3.4rem)}
+  h2{font-size:clamp(1.65rem,4vw,2.5rem);margin-bottom:.6em}
+  h3{font-size:1.2rem}
+  em.hl{font-style:normal;color:var(--gold)}
+  h1{text-wrap:balance}
+  h1 .nw{white-space:nowrap}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  .narrow{max-width:720px}
+  section{padding:72px 0}
+  .center{text-align:center}
+  .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
+  .lead{font-size:1.15rem;color:var(--muted)}
+  .alt{background:var(--paper)}
+
+  /* Botón */
+  .btn{display:inline-flex;flex-direction:column;align-items:center;gap:2px;background:var(--green);color:#fff;text-decoration:none;
+    font-weight:700;font-size:1.1rem;letter-spacing:.02em;padding:18px 34px;border-radius:999px;box-shadow:0 8px 22px rgba(63,138,88,.35);
+    transition:transform .15s,background .15s}
+  .btn small{font-weight:500;font-size:.8rem;opacity:.9;letter-spacing:0}
+  .btn:hover{background:var(--green-d);transform:translateY(-2px)}
+  @media(max-width:600px){.btn{font-size:.95rem;letter-spacing:0;padding:20px 26px;white-space:nowrap;max-width:100%}.btn small{font-size:.8rem}}
+  @media(max-width:380px){.btn{font-size:.86rem;padding:19px 18px}}
+  .trust{margin-top:12px;font-size:.88rem;color:var(--muted)}
+
+  /* Hero */
+  .hero{padding:48px 0 64px}
+  .hero-grid{display:grid;gap:36px;align-items:center}
+  .hero p.lead{margin:18px 0 28px}
+  .hero-img{border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+  .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.88rem}
+  @media(min-width:860px){.hero-grid{grid-template-columns:1.05fr 1fr}.hero{padding:72px 0 88px}}
+
+  /* Dolores */
+  .pains{display:grid;gap:18px;margin-top:36px}
+  .pain{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:grid;gap:16px;align-items:center}
+  .pain img{border-radius:12px;aspect-ratio:4/3;object-fit:cover;width:100%}
+  .pain p{color:var(--muted);margin-top:6px}
+  .pain .illus{border-radius:12px;width:100%;aspect-ratio:4/3;display:block}
+  @media(min-width:760px){.pains{grid-template-columns:1fr 1fr}}
+
+  /* Galerías */
+  .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:32px}
+  .gallery img{border-radius:14px;aspect-ratio:1/1;object-fit:cover;width:100%;background:#eee}
+  .gallery.tall img{aspect-ratio:4/5}
+  .gallery.solo{grid-template-columns:1fr}
+  @media(min-width:760px){.gallery,.gallery.solo{grid-template-columns:repeat(4,1fr)}}
+
+  @media(max-width:759px){.desk-only{display:none!important}}
+  .stat{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:28px}
+  .stat div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 22px;min-width:150px}
+  .stat b{display:block;font-family:Fraunces,"Fraunces Fallback",Georgia,serif;font-size:1.9rem;color:var(--green)}
+  .stat span{font-size:.9rem;color:var(--muted)}
+
+  /* Bonos */
+  .bonus-list{display:grid;gap:22px;margin-top:32px;text-align:left}
+  .bonus{display:grid;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+  .bonus .media{background:#EFE3D3;padding:18px;display:flex;align-items:center;justify-content:center}
+  .bonus .media img{width:100%;max-width:300px;border-radius:14px;box-shadow:0 8px 20px rgba(23,43,45,.15)}
+  .bonus .body{padding:22px 24px 26px;display:flex;flex-direction:column;justify-content:center}
+  .bonus .meta{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .bonus .num{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .bonus .pill{font-size:.72rem;font-weight:700;color:var(--green-d);background:#E2F0E6;border-radius:999px;padding:3px 10px}
+  .bonus h3{font-size:1.3rem;margin-bottom:8px}
+  .bonus p{color:var(--muted);font-size:.95rem}
+  .review{margin:0}
+  .bonus .inc{margin-top:14px;font-size:.85rem;font-weight:700;color:#B5553F}
+  @media(min-width:760px){
+    .bonus{grid-template-columns:240px 1fr}
+    .bonus .media img{max-width:200px}
+    .bonus.big{grid-template-columns:1fr 1.5fr}
+    .bonus.big .media{order:2;padding:26px}
+    .bonus.big .media img{max-width:440px}
+    .bonus.big h3{font-size:1.6rem}
+  }
+
+  /* Testimonios */
+  .reviews{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 4px 20px;margin-top:24px;scrollbar-width:none}
+  .reviews::-webkit-scrollbar{display:none}
+  .review{flex:0 0 auto;width:min(230px,62vw);aspect-ratio:195/350;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;
+    box-shadow:0 6px 18px rgba(23,43,45,.07);scroll-snap-align:center}
+  .review img{width:100%;height:100%;object-fit:cover;object-position:top center}
+  .hint{font-size:.85rem;color:var(--muted)}
+  @media(min-width:760px){
+    .reviews{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;overflow:visible;padding:8px 0 0;margin-top:32px}
+    .review{width:auto}
+    .hint{display:none}
+  }
+
+  /* Stack de valor */
+  .stack{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:10px 24px;margin-top:28px;box-shadow:var(--shadow)}
+  .stack li{list-style:none;display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px dashed var(--line)}
+  .stack li:last-child{border:0;font-weight:700}
+  .stack li span:first-child::before{content:"✓ ";color:var(--green);font-weight:700}
+  .stack li:last-child span:first-child::before{content:""}
+  .stack s{color:var(--muted)}
+
+  /* Certificado */
+  .cert-title{text-align:center;font-family:"DM Sans","DM Sans Fallback",Arial,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.02em;color:var(--gold);font-size:clamp(1.5rem,3.6vw,2.1rem);margin-bottom:36px}
+  .cert-grid{display:grid;gap:32px;align-items:center}
+  .cert-text p{color:var(--muted);font-weight:500;font-size:1.05rem;margin-bottom:16px}
+  .cert-text p:last-child{margin-bottom:0}
+  .cert-img{width:92%;margin:12px auto;border-radius:14px;transform:rotate(-3deg);
+    box-shadow:0 2px 4px rgba(23,43,45,.06),0 18px 40px rgba(23,43,45,.16);transition:transform .3s}
+  .cert-img:hover{transform:rotate(-1deg) scale(1.01)}
+  @media(min-width:860px){.cert-grid{grid-template-columns:1fr 1fr;gap:48px}}
+
+  /* Oferta */
+  .offer{background:var(--ink);color:#fff}
+  .offer h2{color:#fff}
+  .price-card{background:#fff;color:var(--ink);border-radius:26px;max-width:460px;margin:30px auto 0;padding:34px 26px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+  .price-card .from{color:var(--muted)}
+  .price-card .from s{color:#C0392B}
+  .price-card .badge{display:inline-block;background:#FFF3D6;color:#8A5C00;font-weight:700;font-size:.8rem;letter-spacing:.08em;padding:6px 12px;border-radius:999px;margin:10px 0}
+  .price{font-family:Fraunces,"Fraunces Fallback",Georgia,serif;font-weight:700;line-height:1;margin:8px 0 6px;color:var(--green)}
+  .price sup{font-size:1.3rem;vertical-align:top;position:relative;top:14px}
+  .price .big{font-size:5rem}
+  .price .cents{font-size:2rem}
+  .price-card .once{color:var(--muted);margin-bottom:22px}
+  .price-card .pay{margin:22px auto 0;max-width:320px;opacity:.9}
+
+  /* Garantía */
+  .guarantee{display:grid;gap:24px;align-items:center;background:#fff;border:2px solid var(--line);border-radius:24px;padding:30px}
+  .seal{width:120px;height:120px;border-radius:50%;background:var(--gold);color:#fff;display:grid;place-items:center;text-align:center;
+    font-family:Fraunces,"Fraunces Fallback",Georgia,serif;font-weight:700;line-height:1.05;margin:0 auto;box-shadow:0 0 0 6px #fff,0 0 0 8px var(--gold)}
+  .seal b{font-size:2.4rem;display:block}
+  @media(min-width:700px){.guarantee{grid-template-columns:150px 1fr}}
+
+  /* FAQ */
+  details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;padding:0 20px}
+  summary{cursor:pointer;font-weight:700;padding:18px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--green)}
+  details[open] summary::after{content:"–"}
+  details p{padding-bottom:18px;color:var(--muted)}
+
+  footer{padding:36px 0;text-align:center;font-size:.85rem;color:var(--muted);border-top:1px solid var(--line)}
+
+</style>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+// el código de la Meta se carga cuando la persona interactúa (o tras 3,5 s), para no frenar la carga
+var done=0,ev=['scroll','touchstart','pointerdown','mousemove','keydown'],
+go=function(){if(done)return;done=1;ev.forEach(function(x){f.removeEventListener(x,go,{passive:!0})});s.parentNode.insertBefore(t,s)};
+ev.forEach(function(x){f.addEventListener(x,go,{passive:!0})});
+var later=function(){setTimeout(go,3500)};
+if(b.readyState==='complete'){later()}else{f.addEventListener('load',later)}}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '893218283798963');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel -->
+</head>
+<body>
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=893218283798963&ev=PageView&noscript=1"></noscript>
+
+<!-- ======================================================
+     LINK DE CHECKOUT (Hotmart): cámbialo solo aquí abajo
+     ====================================================== -->
+<script>
+  const CHECKOUT = "https://pay.hotmart.com/G106339946C?off=bu8nurse";
+</script>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Aprende a crear hermosas muñecas de tela desde cero, <em class="hl">incluso si nunca <span class="nw">has cosido.</span></em></h1>
+      <p class="lead">Moldes listos y clases explicadas paso a paso, para que termines tu primera muñeca con confianza y un resultado del que te vas a enamorar.</p>
+      <div class="chips">
+        <span class="chip">🎥 +40 clases en video</span>
+        <span class="chip">♾️ Acceso de por vida</span>
+        <span class="chip">📜 Certificado</span>
+        <span class="chip">💬 Soporte por WhatsApp</span>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="images/hero-sm.webp" srcset="images/hero-sm.webp 640w, images/hero-md.webp 800w, images/hero.webp 1024w" sizes="(min-width:860px) 500px, calc(100vw - 40px)"
+           alt="Mariana con las muñecas de tela que enseña a crear en el curso" width="1024" height="827" fetchpriority="high">
+    </div>
+  </div>
+</header>
+
+<!-- DOLORES -->
+<section class="alt">
+  <div class="wrap">
+    <div class="center narrow wrap">
+      <span class="eyebrow">Hecho para quien ama crear</span>
+      <h2>¿Esto te suena familiar?</h2>
+    </div>
+    <div class="pains">
+      <div class="pain">
+        <img width="800" height="533" loading="lazy" src="images/dor-materiales-sm.webp" srcset="images/dor-materiales-sm.webp 480w, images/dor-materiales.webp 800w" sizes="(min-width:1080px) 470px, (min-width:760px) 45vw, calc(100vw - 90px)" alt="Materiales para crear muñecas de tela">
+        <div><h3>Quieres empezar, pero no sabes qué materiales elegir.</h3>
+        <p>Telas, rellenos, hilos, moldes… el primer paso parece mucho más complicado de lo que debería.</p></div>
+      </div>
+      <div class="pain">
+        <img width="800" height="533" loading="lazy" src="images/dor-cosiendo-sm.webp" srcset="images/dor-cosiendo-sm.webp 480w, images/dor-cosiendo.webp 800w" sizes="(min-width:1080px) 470px, (min-width:760px) 45vw, calc(100vw - 90px)" alt="Cosiendo una muñeca de tela">
+        <div><h3>Buscas una actividad creativa que te dé paz.</h3>
+        <p>Un momento para desacelerar, trabajar con las manos y ver una idea tomar forma frente a ti.</p></div>
+      </div>
+      <div class="pain">
+        <img width="800" height="533" loading="lazy" src="images/dor-ingresos-sm.webp" srcset="images/dor-ingresos-sm.webp 480w, images/dor-ingresos.webp 800w" sizes="(min-width:1080px) 470px, (min-width:760px) 45vw, calc(100vw - 90px)" alt="Muñeca de tela con monedas y etiqueta de precio">
+        <div><h3>Quieres convertir un hobby en ingresos.</h3>
+        <p>Crear desde casa, ganar autonomía y vender muñecas con identidad propia.</p></div>
+      </div>
+      <div class="pain">
+        <svg class="illus" viewBox="0 0 400 300" role="img" aria-label="Del molde a la muñeca: un camino claro paso a paso">
+          <defs>
+            <linearGradient id="bgc" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#F8E6DC"/><stop offset="1" stop-color="#E6EFE3"/>
+            </linearGradient>
+          </defs>
+          <rect x="1" y="1" width="398" height="298" rx="22" fill="url(#bgc)" stroke="#E3D9CC" stroke-width="2"/>
+          <!-- destello superior -->
+          <path d="M200 52 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z" fill="#D9A21B"/>
+          <!-- 1: molde -->
+          <rect x="34" y="102" width="86" height="86" rx="14" fill="#E3EEDC" stroke="#A9C49F" stroke-width="2.5"/>
+          <rect x="58" y="114" width="38" height="62" rx="3" fill="#FFFBF4" stroke="#C9BFAE" stroke-width="1.5"/>
+          <path d="M77 124 a6 6 0 1 1 0.1 0 M77 136 c-8 2 -10 12 -11 30 h22 c-1 -18 -3 -28 -11 -30" fill="none" stroke="#C2554A" stroke-width="2" stroke-dasharray="3 3"/>
+          <!-- flecha 1 -->
+          <path d="M126 145 h28" stroke="#3E6B4C" stroke-width="3" stroke-linecap="round"/>
+          <path d="M150 138 l9 7 -9 7" fill="none" stroke="#3E6B4C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- 2: costura -->
+          <rect x="164" y="102" width="86" height="86" rx="14" fill="#EFA990" stroke="#C9614B" stroke-width="2.5"/>
+          <rect x="190" y="116" width="34" height="58" rx="3" fill="#F6E5C4" stroke="#C9A974" stroke-width="1.5"/>
+          <path d="M196 130 h22 M196 140 h22 M196 150 h22 M196 160 h22" stroke="#B88A55" stroke-width="1.5"/>
+          <path d="M232 112 L214 172" stroke="#5B6F78" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M231 115 c6 12 4 30 -6 46" fill="none" stroke="#C2554A" stroke-width="1.5"/>
+          <!-- flecha 2 -->
+          <path d="M256 145 h28" stroke="#3E6B4C" stroke-width="3" stroke-linecap="round"/>
+          <path d="M280 138 l9 7 -9 7" fill="none" stroke="#3E6B4C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- 3: muñeca -->
+          <rect x="294" y="102" width="86" height="86" rx="14" fill="#FBF0CF" stroke="#E2BE5E" stroke-width="2.5"/>
+          <circle cx="324" cy="130" r="8" fill="#8A4B2A"/><circle cx="350" cy="130" r="8" fill="#8A4B2A"/>
+          <circle cx="337" cy="132" r="14" fill="#8A4B2A"/>
+          <circle cx="337" cy="136" r="11" fill="#F6D7BF"/>
+          <path d="M327 128 q10 -8 20 0" fill="#8A4B2A"/>
+          <circle cx="333" cy="137" r="1.6" fill="#3A2A20"/><circle cx="341" cy="137" r="1.6" fill="#3A2A20"/>
+          <circle cx="330" cy="141" r="2" fill="#F2A7A0"/><circle cx="344" cy="141" r="2" fill="#F2A7A0"/>
+          <path d="M327 150 h20 l6 22 h-32z" fill="#E07A6B"/>
+          <path d="M331 172 v8 M343 172 v8" stroke="#F6D7BF" stroke-width="3" stroke-linecap="round"/>
+          <path d="M322 154 l-5 10 M352 154 l5 10" stroke="#F6D7BF" stroke-width="3" stroke-linecap="round"/>
+          <path d="M366 112 l2.5 6 6 2.5 -6 2.5 -2.5 6 -2.5 -6 -6 -2.5 6 -2.5z" fill="#D9A21B"/>
+          <path d="M306 168 l1.8 4 4 1.8 -4 1.8 -1.8 4 -1.8 -4 -4 -1.8 4 -1.8z" fill="#D9A21B"/>
+          <!-- camino -->
+          <path d="M60 222 Q200 268 340 222" fill="none" stroke="#B9473B" stroke-width="2.5" stroke-dasharray="7 6" stroke-linecap="round"/>
+        </svg>
+        <div><h3>Ya intentaste aprender, pero te faltó un camino claro.</h3>
+        <p>Necesitas explicaciones prácticas, didácticas y accesibles para avanzar con confianza.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUCIÓN + MUÑECAS -->
+<section>
+  <div class="wrap center">
+    <span class="eyebrow">La solución</span>
+    <h2>Existe una manera más sencilla de crear tus muñecas</h2>
+    <p class="lead narrow desk-only" style="margin:0 auto">Un método paso a paso, del molde al último detalle, pensado para quien empieza desde cero.</p>
+    <div class="stat desk-only">
+      <div><b>∞</b><span>acceso de por vida</span></div>
+      <div><b>100%</b><span>online, a tu ritmo</span></div>
+    </div>
+    <div class="gallery tall solo">
+      <img width="800" height="800" loading="lazy" src="images/muneca-1-sm.webp" srcset="images/muneca-1-sm.webp 400w, images/muneca-1.webp 800w" sizes="(min-width:760px) 245px, calc(100vw - 40px)" alt="Muñeca de tela del curso">
+      <img width="800" height="840" loading="lazy" src="images/muneca-2-sm.webp" srcset="images/muneca-2-sm.webp 400w, images/muneca-2.webp 800w" sizes="(min-width:760px) 245px, calc(100vw - 40px)" alt="Muñeca de tela del curso">
+      <img width="768" height="807" loading="lazy" src="images/muneca-3-sm.webp" srcset="images/muneca-3-sm.webp 400w, images/muneca-3.webp 768w" sizes="(min-width:760px) 245px, calc(100vw - 40px)" alt="Muñeca de tela del curso">
+      <img width="768" height="807" loading="lazy" src="images/muneca-4-sm.webp" srcset="images/muneca-4-sm.webp 400w, images/muneca-4.webp 768w" sizes="(min-width:760px) 245px, calc(100vw - 40px)" alt="Muñeca de tela del curso">
+    </div>
+  </div>
+</section>
+
+<!-- ROPITA -->
+<section class="alt">
+  <div class="wrap center">
+    <span class="eyebrow">También aprendes</span>
+    <h2>Ropita y zapatitos</h2>
+    <p class="lead narrow" style="margin:0 auto">Cada muñeca con su propio estilo: conjuntos, gorritos y zapatitos que hacen la diferencia.</p>
+    <div class="gallery solo">
+      <img width="768" height="768" loading="lazy" src="images/ropita-1-sm.webp" srcset="images/ropita-1-sm.webp 400w, images/ropita-1.webp 768w" sizes="(min-width:760px) 245px, calc(100vw - 40px)" alt="Ropita y zapatitos para muñecas de tela">
+      <img width="768" height="768" loading="lazy" src="images/ropita-2-sm.webp" srcset="images/ropita-2-sm.webp 400w, images/ropita-2.webp 768w" sizes="(min-width:760px) 245px, calc(100vw - 40px)" alt="Ropita y zapatitos para muñecas de tela">
+      <img width="768" height="768" loading="lazy" src="images/ropita-3-sm.webp" srcset="images/ropita-3-sm.webp 400w, images/ropita-3.webp 768w" sizes="(min-width:760px) 245px, calc(100vw - 40px)" alt="Ropita y zapatitos para muñecas de tela">
+      <img width="768" height="768" loading="lazy" src="images/ropita-4-sm.webp" srcset="images/ropita-4-sm.webp 400w, images/ropita-4.webp 768w" sizes="(min-width:760px) 245px, calc(100vw - 40px)" alt="Ropita y zapatitos para muñecas de tela">
+    </div>
+  </div>
+</section>
+
+<!-- AMIGURUMI -->
+<section>
+  <div class="wrap center">
+    <span class="eyebrow">Regalo exclusivo</span>
+    <h2>Recibe <em class="hl">GRATIS</em> un mini curso de Amigurumis</h2>
+    <p class="lead narrow" style="margin:0 auto">Al adquirir tu acceso a Muñecas de Tela, te llevas también este mini curso para explorar una nueva técnica.</p>
+    <div class="gallery tall">
+      <img width="800" height="1000" loading="lazy" src="images/amigurumi-1-sm.webp" srcset="images/amigurumi-1-sm.webp 400w, images/amigurumi-1.webp 800w" sizes="(min-width:760px) 245px, calc(50vw - 27px)" alt="Amigurumi del mini curso">
+      <img width="800" height="1000" loading="lazy" src="images/amigurumi-2-sm.webp" srcset="images/amigurumi-2-sm.webp 400w, images/amigurumi-2.webp 800w" sizes="(min-width:760px) 245px, calc(50vw - 27px)" alt="Amigurumi del mini curso">
+      <img width="800" height="1000" loading="lazy" src="images/amigurumi-3-sm.webp" srcset="images/amigurumi-3-sm.webp 400w, images/amigurumi-3.webp 800w" sizes="(min-width:760px) 245px, calc(50vw - 27px)" alt="Amigurumi del mini curso">
+      <img width="800" height="1000" loading="lazy" src="images/amigurumi-4-sm.webp" srcset="images/amigurumi-4-sm.webp 400w, images/amigurumi-4.webp 800w" sizes="(min-width:760px) 245px, calc(50vw - 27px)" alt="Amigurumi del mini curso">
+    </div>
+  </div>
+</section>
+
+<!-- LO QUE RECIBES -->
+<section class="alt">
+  <div class="wrap narrow">
+    <div class="center"><span class="eyebrow">Todo lo que incluye</span><h2>Lo que vas a recibir</h2></div>
+    <ul class="stack">
+      <li><span>Curso de Muñecas de Tela</span><s>26 €</s></li>
+      <li><span>Acceso de por vida</span><s>5 €</s></li>
+      <li><span>Soporte VIP por WhatsApp</span><s>5 €</s></li>
+      <li><span>Clases adicionales y nuevas actualizaciones</span><s>10 €</s></li>
+      <li><span>Mini curso de Amigurumis</span><s>5 €</s></li>
+      <li><span>Valor total</span><s>51 €</s></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CERTIFICADO -->
+<section class="cert">
+  <div class="wrap">
+    <h2 class="cert-title">Certificado de finalización</h2>
+    <div class="cert-grid">
+      <div class="cert-text">
+        <p>Todas las clases fueron cuidadosamente creadas para que aprendas paso a paso y puedas convertirte en especialista en la creación de muñecas de tela, incluso si estás comenzando desde cero.</p>
+        <p>Un curso creado especialmente para ti, que quieres aprender a crear muñecas de tela y convertir este hermoso arte en una nueva oportunidad.</p>
+        <p>Además de aprender nuevas técnicas, desarrollarás una habilidad que puede abrir nuevas oportunidades para ti. Al finalizar las clases, podrás descargar tu certificado directamente desde la plataforma.</p>
+      </div>
+      <img class="cert-img" loading="lazy" src="images/certificado.webp" width="559" height="394" alt="Modelo del certificado de finalización del Curso de Muñecas de Tela">
+    </div>
+  </div>
+</section>
+
+<!-- BONOS -->
+<section class="alt">
+  <div class="wrap center">
+    <span class="eyebrow">Y todavía más</span>
+    <h2>Bonos incluidos</h2>
+    <div class="bonus-list">
+      <div class="bonus">
+        <div class="media"><img loading="lazy" src="images/bono-1-sm.webp" srcset="images/bono-1-sm.webp 480w, images/bono-1.webp 800w" sizes="(min-width:760px) 200px, calc(100vw - 80px)" width="800" height="731" alt="Bono 1: 100 moldes exclusivos de muñecas de tela"></div>
+        <div class="body">
+          <div class="meta"><span class="num">Bono 01</span><span class="pill">Incluido</span></div>
+          <h3>Bono 1 - 100 Moldes Exclusivos de Muñecas de Tela</h3>
+          <p>¡Recibe una colección con 100 moldes para crear hermosas muñecas de tela!</p>
+          <span class="inc">Incluido con tu compra</span>
+        </div>
+      </div>
+      <div class="bonus big">
+        <div class="media"><img loading="lazy" src="images/bono-2-sm.webp" srcset="images/bono-2-sm.webp 480w, images/bono-2.webp 800w" sizes="(min-width:760px) 440px, calc(100vw - 80px)" width="800" height="731" alt="Bono 2: Guía completa de muñecas de tela"></div>
+        <div class="body">
+          <div class="meta"><span class="num">Bono 02</span><span class="pill">Incluido</span></div>
+          <h3>Bono 2 - Guía Completa de Muñecas de Tela</h3>
+          <p>Una guía práctica y fácil de seguir para aprender a crear hermosas muñecas de tela, desde el inicio hasta los acabados finales.</p>
+          <span class="inc">Incluido con tu compra</span>
+        </div>
+      </div>
+      <div class="bonus">
+        <div class="media"><img loading="lazy" src="images/bono-3-sm.webp" srcset="images/bono-3-sm.webp 480w, images/bono-3.webp 800w" sizes="(min-width:760px) 200px, calc(100vw - 80px)" width="800" height="731" alt="Bono 3: Clase y molde Abuelo Gnomo"></div>
+        <div class="body">
+          <div class="meta"><span class="num">Bono 03</span><span class="pill">Incluido</span></div>
+          <h3>Bono 3 - Clase + Molde Abuelo Gnomo</h3>
+          <p>Aprende a crear este encantador Abuelo Gnomo paso a paso, de forma sencilla y práctica.</p>
+          <span class="inc">Incluido con tu compra</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section>
+  <div class="wrap center">
+    <span class="eyebrow">Alumnas reales</span>
+    <h2>Mira lo que dicen quienes ya empezaron</h2>
+    <p class="hint">Desliza para ver más →</p>
+    <div class="reviews">
+      <figure class="review"><img width="474" height="1024" loading="lazy" src="images/testimonio-2.webp" alt="Mensaje de WhatsApp de Sara, alumna del curso, mostrando su muñeca"></figure>
+      <figure class="review"><img width="560" height="996" loading="lazy" src="images/testimonio-3.webp" alt="Mensaje de WhatsApp de Silvania, alumna del curso, mostrando su muñeca"></figure>
+      <figure class="review"><img width="473" height="1024" loading="lazy" src="images/testimonio-4.webp" alt="Mensaje de WhatsApp de Veridiana, alumna del curso, mostrando su muñeca"></figure>
+      <figure class="review"><img width="474" height="1024" loading="lazy" src="images/testimonio-5.webp" alt="Mensaje de WhatsApp de Juliana, alumna del curso, mostrando su muñeca"></figure>
+      <figure class="review"><img width="560" height="841" loading="lazy" src="images/testimonio-1.webp" alt="Mensaje de WhatsApp de Simone, alumna del curso, mostrando su muñeca"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="offer" id="oferta">
+  <div class="wrap center">
+    <span class="eyebrow" style="color:#9BD3AE">Oferta especial</span>
+    <h2>Empieza hoy por menos de lo que cuesta un metro de tela</h2>
+    <div class="price-card">
+      <p class="from">De <s>51,00 €</s> por solo</p>
+      <span class="badge">PRECIO ESPECIAL DE LANZAMIENTO</span>
+      <div class="price"><span class="big">9</span><span class="cents">,90</span><sup style="margin-left:4px">€</sup></div>
+      <p class="once">Pago único · Acceso de por vida</p>
+      <a class="btn js-cta" href="#">QUIERO APROVECHAR LA OFERTA<small>Acceso inmediato al curso</small></a>
+      <p class="trust">🔒 Pago 100% seguro · Acceso inmediato</p>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTÍA -->
+<section>
+  <div class="wrap narrow">
+    <div class="guarantee">
+      <div class="seal"><div><b>30</b>DÍAS</div></div>
+      <div>
+        <h2 style="font-size:1.6rem">Garantía de satisfacción</h2>
+        <p class="lead" style="font-size:1rem">Entra, mira las clases y empieza tu primera muñeca. Si en los primeros 30 días sientes que el curso no es para ti, pides el reembolso directamente en Hotmart y te devolvemos el 100% de tu dinero. Sin preguntas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="alt">
+  <div class="wrap narrow">
+    <div class="center"><span class="eyebrow">Dudas</span><h2>Preguntas frecuentes</h2></div>
+    <details><summary>¿Necesito saber coser?</summary><p>No. El curso está pensado para empezar desde cero, con explicaciones paso a paso y moldes listos para usar.</p></details>
+    <details><summary>¿Cómo recibo el acceso?</summary><p>El acceso es inmediato: después de la compra recibes en tu correo los datos para entrar a la plataforma de Hotmart.</p></details>
+    <details><summary>¿Por cuánto tiempo tengo acceso?</summary><p>De por vida. Pagas una sola vez y puedes ver las clases cuantas veces quieras, a tu ritmo, incluidas las actualizaciones.</p></details>
+    <details><summary>¿Hay mensualidades?</summary><p>No. Es un pago único de 9,90 €.</p></details>
+    <details><summary>¿Recibo certificado?</summary><p>Sí. Al finalizar las clases puedes descargar tu certificado directamente desde la plataforma.</p></details>
+    <details><summary>¿Y si tengo dudas durante el curso?</summary><p>Tienes soporte VIP por WhatsApp para ayudarte en cada etapa.</p></details>
+    <details><summary>¿Qué pasa si no me gusta?</summary><p>Tienes 30 días de garantía. Si no quedas satisfecha, solicitas el reembolso en Hotmart y recibes el 100% de tu dinero.</p></details>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section>
+  <div class="wrap center narrow">
+    <h2>Tu primera muñeca empieza con un clic</h2>
+    <p class="lead" style="margin-bottom:28px">Clases, moldes, bonos y acceso de por vida por un pago único de 9,90 €.</p>
+    <a class="btn js-cta" href="#">QUIERO APROVECHAR LA OFERTA<small>Acceso inmediato al curso</small></a>
+    <p class="trust">🔒 Pago seguro · Garantía de 30 días</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="y"></span> Curso de Muñecas de Tela de Mariana · Todos los derechos reservados</div>
+</footer>
+
+<script>
+  // Todos los botones llevan al checkout (excepto el del hero, que baja a la oferta)
+  document.querySelectorAll('.js-cta').forEach(a => {
+    if (a.getAttribute('href') === '#') { a.href = CHECKOUT; a.rel = 'noopener'; }
+  });
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+<!-- Rastreamento de anúncios: repassa xcod e UTMs para o checkout da Hotmart -->
+<script>
+(function () {
+  // xcod válido = só dígitos (o {{ad.id}} da Meta)
+  var VALID = /^\d{5,25}$/;
+  var KEY = "xcod_ad";
+  var DAYS = 7;
+  var UTMS = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"];
+
+  var params = new URLSearchParams(window.location.search);
+  var xcod = params.get("xcod");
+  if (!xcod || !VALID.test(xcod)) {
+    var content = params.get("utm_content");
+    xcod = content && VALID.test(content) ? content : null;
+  }
+
+  // Guarda o último anúncio clicado, para quem volta à página depois
+  try {
+    if (xcod) {
+      localStorage.setItem(KEY, JSON.stringify({ v: xcod, t: Date.now() }));
+    } else {
+      var saved = JSON.parse(localStorage.getItem(KEY) || "null");
+      if (saved && VALID.test(saved.v) && Date.now() - saved.t < DAYS * 864e5) {
+        xcod = saved.v;
+      }
+    }
+  } catch (e) {}
+
+  function decorate(a) {
+    if (!a || !a.href || a.href.indexOf("hotmart.com") === -1) return;
+    try {
+      var url = new URL(a.href);
+      if (xcod) url.searchParams.set("xcod", xcod);
+      UTMS.forEach(function (k) {
+        var v = params.get(k);
+        if (v && !url.searchParams.get(k)) url.searchParams.set(k, v);
+      });
+      a.href = url.toString();
+    } catch (e) {}
+  }
+
+  function decorateAll() {
+    document.querySelectorAll('a[href*="hotmart.com"]').forEach(decorate);
+  }
+
+  // Na carga da página e de novo no clique (pega botões de popup e os que surgem depois)
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", decorateAll);
+  } else {
+    decorateAll();
+  }
+  document.addEventListener("click", function (e) {
+    decorate(e.target.closest && e.target.closest("a"));
+  }, true);
+})();
+</script>
+</body>
+</html>
